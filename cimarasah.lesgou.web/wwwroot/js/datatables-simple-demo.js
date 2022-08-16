@@ -4,6 +4,17 @@ window.addEventListener('DOMContentLoaded', event => {
 
     const datatablesSimple = document.getElementById('datatablesSimple');
     if (datatablesSimple) {
-        new simpleDatatables.DataTable(datatablesSimple);
+        new simpleDatatables.DataTable(datatablesSimple)
+    }
+    
+});
+
+const dataTable = new simpleDatatables.DataTable("#datatablesSimple", {
+    labels: {
+        placeholder: "Buscar...",
+        perPage: "Exibir {select} registros",
+        noRows: "Nenhum registro cadastrado",
+        noResults: "Nenhum registro encontrado na busca",
+        info: "({page} de {pages})",
     }
 });
